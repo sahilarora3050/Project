@@ -1,0 +1,27 @@
+import numpy as np
+import yfinance as yf
+import pandas as pd
+import matplotlib.pyplot as plt
+import scipy.optimize as opt
+
+# stocks we are going to handle
+stocks = ['AAPL', 'WMT', 'TSLA', 'AMZN']
+
+# historical data - define START and END dates
+start_date = '2020-01-01'
+end_date = '2024-12-31'
+
+def download_data():
+    # name of the stock (key) - stock values (2020-2024) as the values
+    stock_data = {}
+
+    for stock in stocks:
+        ticker = yf.Ticker(stock)
+        stock_data[stock] = ticker.history(start=start_date, end=end_date)['Close']
+
+    return pd.DataFrame(stock_data)
+
+
+if __name__ == '__main__':
+    print(download_data())
+
