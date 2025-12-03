@@ -1,6 +1,6 @@
-# Project
+#Markowitz Model (Modern Portfolio Theory)
 
-#This is a project on the Markowitz Model(Modern Portfolio Theory) 
+#This is a project on the Markowitz Model (Modern Portfolio Theory) 
 #It was first formulated by Harry Markowitz back in 1952.
 #It is a portfolio optimaztion model.
 
